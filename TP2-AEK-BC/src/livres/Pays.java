@@ -8,7 +8,10 @@ public class Pays {
     private String nomPays = NOM_PAYS_DEFAUT;
     private String codePays = CODE_PAYS_DEFAUT;
 
-
+    public Pays(String nomPays, String codePays) {
+        this.nomPays = nomPays;
+        this.codePays = codePays;
+    }
 
     //fin classe
 }
