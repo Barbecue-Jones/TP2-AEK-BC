@@ -12,4 +12,5 @@ public class Serie {
         this.nom = nom;
         this.listeOuvrage = listeOuvrage;
     }
+//todo Rendre l'affaire utilisable (getters, setters etc)
 }
