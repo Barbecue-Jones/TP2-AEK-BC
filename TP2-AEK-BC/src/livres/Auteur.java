@@ -15,7 +15,8 @@ public class Auteur {
 
     private String prenom = INCONNU;
     private String nom = INCONNU;
-    private String paysOrigine = INCONNU;
+    //todo a modifier dans le code String -> objet
+    private Pays paysOrigine = new Pays(Pays.NOM_PAYS_DEFAUT, Pays.CODE_PAYS_DEFAUT);
 
     public Auteur(String prenom, String nom, String paysOrigine) {
         setPrenom(prenom);
