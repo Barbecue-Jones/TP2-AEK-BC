@@ -13,5 +13,8 @@ public class Pays {
         this.codePays = codePays;
     }
 
+    //todo ajouter getter/setter
+
+
     //fin classe
 }
