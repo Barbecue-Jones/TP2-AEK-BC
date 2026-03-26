@@ -1,5 +1,6 @@
 package tests;
 
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,8 +37,32 @@ public class TestOuvrage {
         Auteur albertine = new Auteur("Albertine", "Tremblay", canada);
         Auteur john = new Auteur("John", "Smith", etasUnis);
 
-        Serie seigneurDesAnneaux = new Serie("communauteAnneaux", new ArrayList<>());
-        Serie bible = new Serie("vieuxTestatment", new ArrayList<>());
+        Serie seigneurDesAnneaux = new Serie("communauteAnneaux", new ArrayList<Ouvrage>());
+        Serie bible = new Serie("vieuxTestatment", new ArrayList<Ouvrage>());
+
+        //creation ouvrage
+        Ouvrage ouvrage1 = new Ouvrage("ouvrage1", john, Ouvrage.TYPE_DEFAULT);
+        Ouvrage ouvrage2 = new Ouvrage("ouvrage2", albertine, Ouvrage.TYPE_DEFAULT);
+
+
+        //ajout d' ouvrages aux series
+        seigneurDesAnneaux.ajoutOuvrageListe(ouvrage1);
+        seigneurDesAnneaux.ajoutOuvrageListe(ouvrage2);
+
+
+
+        //afficher Serie
+        System.out.println("-------ajoutOuvrage------");
+        System.out.println(seigneurDesAnneaux);
+        System.out.println();
+
+        //retirer ouvrage
+        seigneurDesAnneaux.retirerOuvrageListe(ouvrage2);
+
+        //afficher Serie
+        System.out.println("-------apresRetraitOuvrage------");
+        System.out.println(seigneurDesAnneaux);
+        System.out.println();
 
         //Voici une partie des tests! Il faut en ajouter, pour les fonctionnalités non testées!
         System.out.println("-----Test des constructeurs d'ouvrage et des diverses validations-----------");
