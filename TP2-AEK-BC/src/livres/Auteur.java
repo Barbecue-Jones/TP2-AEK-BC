@@ -16,16 +16,17 @@ public class Auteur {
     private String prenom = INCONNU;
     private String nom = INCONNU;
     //todo a modifier dans le code String -> objet
-    private Pays paysOrigine = new Pays(Pays.NOM_PAYS_DEFAUT, Pays.CODE_PAYS_DEFAUT);
+    private Pays paysOrigine;
 
-    public Auteur(String prenom, String nom, String paysOrigine) {
+    public Auteur(String prenom, String nom, Pays paysOrigine) {
         setPrenom(prenom);
         setNom(nom);
+        paysOrigine = new Pays(Pays.NOM_PAYS_DEFAUT, Pays.CODE_PAYS_DEFAUT);
         setPaysOrigine(paysOrigine);
     }
 
     public Auteur() {
-        this(INCONNU, INCONNU, INCONNU);
+        this(INCONNU, INCONNU, null);
     }
 
     public String getPrenom() {
@@ -44,11 +45,11 @@ public class Auteur {
         this.nom = nom;
     }
 
-    public String getPaysOrigine() {
+    public Pays getPaysOrigine() {
         return paysOrigine;
     }
 
-    private void setPaysOrigine(String paysOrigine) {
+    private void setPaysOrigine(Pays paysOrigine) {
         this.paysOrigine = paysOrigine;
     }
 
