@@ -25,7 +25,7 @@ public class TestOuvrage {
 
 
     public void testOuvrages() {
-        //todo Implimenter les tests de Pays
+        //Ajout de Pays
         Pays canada = new Pays("Canada", "CAD");
         Pays cameroun =  new Pays("Cameroun", "CAM");
         Pays empireRomain = new Pays("Empire Romain", "ER");
@@ -35,6 +35,8 @@ public class TestOuvrage {
         //Deux auteurs deja prets pour les tests...
         Auteur albertine = new Auteur("Albertine", "Tremblay", canada);
         Auteur john = new Auteur("John", "Smith", etasUnis);
+        Auteur Paul = new Auteur("Paul","de Tarse", empireRomain);
+        Auteur tolkien = new Auteur("J.R.R", "Tolkien", royaumeUni);
 
         Serie seigneurDesAnneaux = new Serie("communauteAnneaux", new ArrayList<>());
         Serie bible = new Serie("vieuxTestatment", new ArrayList<>());
@@ -113,6 +115,14 @@ public class TestOuvrage {
 
         resultat = bibliotheque.trouverOuvrages(new Auteur("Jacques", "Beaulieu", null));
         System.out.println("Livres de Jacques: " + resultat);
+    }
+    //Test
+    public void testAfficherAuteurPays() {
+        System.out.println("\n-----Tests de la  méthode testAfficherAuteurPays-----------");
+
+        Pays etasUnis = new Pays("Etas-Unis", "USA");
+
+        Auteur ronHubbard = new Auteur("Ron", "Hubbard", etasUnis) ;
     }
 
 
