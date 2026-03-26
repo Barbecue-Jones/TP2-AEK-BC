@@ -12,17 +12,20 @@ import java.util.Objects;
 
 public abstract class Ouvrage {
 
-
+//    public enum Format {
+//        PAPIER, AUDIO, VIDEO
+//    }
 
     public static final String TITRE_INCONNU = "Titre Inconnu";
     public static final int NOMBRE_EXEMPLAIRE_DEFAUT = 0;
+//    public static final Format TYPE_DEFAULT = Format.PAPIER;
     public static final int LONGUEUR_TITRE_MIN = 3;
 
     protected String titre = TITRE_INCONNU;
     protected Auteur auteur = new Auteur();
     protected LocalDate date;
     protected int nombreExemplaires = NOMBRE_EXEMPLAIRE_DEFAUT;
-
+//    private Format type = TYPE_DEFAULT;
 
     public Ouvrage(String titre, Auteur auteur,
                    LocalDate date, int nombreExemplaires) {
@@ -31,7 +34,18 @@ public abstract class Ouvrage {
         setDate(date);
         setNombreExemplaires(nombreExemplaires);
     }
+//    public Ouvrage(String titre, Auteur auteur, Format type,
+//                   LocalDate date, int nombreExemplaires) {
+//        setTitre(titre);
+//        setAuteur(auteur);
+//        this.type = type;
+//        setDate(date);
+//        setNombreExemplaires(nombreExemplaires);
+//    }
 
+//    public Ouvrage(String titre, Auteur auteur,Format type) {
+//        this(titre, auteur, type, null, NOMBRE_EXEMPLAIRE_DEFAUT);
+//    }
 
     public Ouvrage(String titre, Auteur auteur) {
         this(titre, auteur, null, NOMBRE_EXEMPLAIRE_DEFAUT);
@@ -98,7 +112,14 @@ public abstract class Ouvrage {
         return "[" + identificateur() + "] " + titre + " (" + auteur.getPrenom() + " "
                 + auteur.getNom() + ") - " + " - disponible le " + affichageDAte + " (" + nombreExemplaires + " ex.)";
     }
-
+//    @Override
+//    public String toString() {
+//
+//        String affichageDAte = date != null ? date.toString() : "Non Disponible";
+//
+//        return "[" + identificateur() + "] " + titre + " (" + auteur.getPrenom() + " "
+//                + auteur.getNom() + ") - " + type + " - disponible le " + affichageDAte + " (" + nombreExemplaires + " ex.)";
+//    }
 
 
     public void acheter(int nombre) {
@@ -127,11 +148,25 @@ public abstract class Ouvrage {
         return Objects.equals(titre, ouvrage.titre) &&
                 Objects.equals(auteur, ouvrage.auteur);
     }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof Ouvrage)) return false;
+//        Ouvrage ouvrage = (Ouvrage) o;
+//        return Objects.equals(titre, ouvrage.titre) &&
+//                Objects.equals(auteur, ouvrage.auteur) &&
+//                type == ouvrage.type;
+//    }
+
 
     @Override
     public int hashCode() {
         return Objects.hash(titre, auteur);
     }
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(titre, auteur, type);
+//    }
 
     private static boolean nombreExemplairesValides(int nombreExemplaires) {
         return (nombreExemplaires >= 0);
