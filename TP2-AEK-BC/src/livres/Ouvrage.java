@@ -13,7 +13,7 @@ import java.util.Objects;
 public abstract class Ouvrage {
 
 //    public enum Format {
-//        PAPIER, AUDIO, VIDEO
+//        PAPIER, AUDIO, VIDEO, HOLOGRAMME
 //    }
 
     public static final String TITRE_INCONNU = "Titre Inconnu";
@@ -39,12 +39,12 @@ public abstract class Ouvrage {
 //        setTitre(titre);
 //        setAuteur(auteur);
 //        this.type = type;
-//        setDate(date);
+//        setDate(date); haabababab
 //        setNombreExemplaires(nombreExemplaires);
 //    }
 
 //    public Ouvrage(String titre, Auteur auteur,Format type) {
-//        this(titre, auteur, type, null, NOMBRE_EXEMPLAIRE_DEFAUT);
+//        this(titre, auteur, type, null, NOMBRE_EXEMPLAIRE_DEFAUT); ddada heheeh  il ike shawarma
 //    }
 
     public Ouvrage(String titre, Auteur auteur) {
@@ -96,7 +96,7 @@ public abstract class Ouvrage {
     }
 
 //    public Format getType() {
-//        return type;
+//        return type; Je ne suis
 //    }
 
     public String identificateur() {
