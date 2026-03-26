@@ -21,10 +21,10 @@ public abstract class Ouvrage {
 //    public static final Format TYPE_DEFAULT = Format.PAPIER;
     public static final int LONGUEUR_TITRE_MIN = 3;
 
-    private String titre = TITRE_INCONNU;
-    private Auteur auteur = new Auteur();
-    private LocalDate date;
-    private int nombreExemplaires = NOMBRE_EXEMPLAIRE_DEFAUT;
+    protected String titre = TITRE_INCONNU;
+    protected Auteur auteur = new Auteur();
+    protected LocalDate date;
+    protected int nombreExemplaires = NOMBRE_EXEMPLAIRE_DEFAUT;
 //    private Format type = TYPE_DEFAULT;
 
     public Ouvrage(String titre, Auteur auteur,
