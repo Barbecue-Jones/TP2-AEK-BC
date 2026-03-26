@@ -1,18 +1,23 @@
 package livres;
 
 import java.text.Format;
+import java.time.LocalDate;
 import java.util.Objects;
 
-public class OuvrageAudio {
+public class OuvrageAudio extends Ouvrage{
     public final FormatAudio FORMAT_DEFAUT = FormatAudio.ANALOGIQUE;
 
     private int nbMinutes;
     private FormatAudio format = FORMAT_DEFAUT;
 
-    public OuvrageAudio(int nbMinutes, FormatAudio format) {
-        this.nbMinutes = nbMinutes;
-        this.format = format;
+    public OuvrageAudio(String titre, Auteur auteur, LocalDate date, int nombreExemplaires) {
+        super(titre, auteur, date, nombreExemplaires);
     }
+
+    public OuvrageAudio(String titre, Auteur auteur) {
+        super(titre, auteur);
+    }
+
 
     //getters/setters
     public int getNbMinutes() {
