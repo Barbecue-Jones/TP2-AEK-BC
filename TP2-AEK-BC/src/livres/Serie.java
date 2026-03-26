@@ -30,12 +30,22 @@ public class Serie {
     }
 
     //Methodes utiles
-    public void ajoutOuvrageListe(ArrayList<Ouvrage> listeOuvrage){
-        listeOuvrage.add(new Ouvrage("", new Auteur(" ", " ", new Pays(Pays.NOM_PAYS_DEFAUT, Pays.CODE_PAYS_DEFAUT)), Ouvrage.TYPE_DEFAULT));
+    public void ajoutOuvrageListe(Ouvrage o){
+        listeOuvrage.add(o);
     }
 
     public void retirerOuvrageListe(Ouvrage o){
         listeOuvrage.remove(o);
     }
 
+    //affichage
+
+
+    @Override
+    public String toString() {
+        return "Serie{" +
+                "nom='" + nom + '\'' +
+                ", listeOuvrage=" + listeOuvrage +
+                '}';
+    }
 }
