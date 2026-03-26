@@ -11,7 +11,7 @@ public class Serie {
         this.nom = nom;
         this.listeOuvrage = listeOuvrage;
     }
-//todo Rendre l'affaire utilisable (getters, setters etc)
+
 
     public String getNom() {
         return nom;
@@ -28,4 +28,14 @@ public class Serie {
     public void setListeOuvrage(ArrayList<Ouvrage> listeOuvrage) {
         this.listeOuvrage = listeOuvrage;
     }
+
+    //Methodes utiles
+    public void ajoutOuvrageListe(ArrayList<Ouvrage> listeOuvrage){
+        listeOuvrage.add(new Ouvrage("", new Auteur(" ", " ", new Pays(Pays.NOM_PAYS_DEFAUT, Pays.CODE_PAYS_DEFAUT)), Ouvrage.TYPE_DEFAULT));
+    }
+
+    public void retirerOuvrageListe(Ouvrage o){
+        listeOuvrage.remove(o);
+    }
+
 }

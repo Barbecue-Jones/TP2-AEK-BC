@@ -1,11 +1,13 @@
 package tests;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import livres.Ouvrage;
 import livres.Auteur;
 import livres.Pays;
+import livres.Serie;
 
 /**
  * CoursPOO 1
@@ -33,6 +35,9 @@ public class TestOuvrage {
         //Deux auteurs deja prets pour les tests...
         Auteur albertine = new Auteur("Albertine", "Tremblay", canada);
         Auteur john = new Auteur("John", "Smith", etasUnis);
+
+        Serie seigneurDesAnneaux = new Serie("communauteAnneaux", new ArrayList<>());
+        Serie bible = new Serie("vieuxTestatment", new ArrayList<>());
 
         //Voici une partie des tests! Il faut en ajouter, pour les fonctionnalités non testées!
         System.out.println("-----Test des constructeurs d'ouvrage et des diverses validations-----------");
