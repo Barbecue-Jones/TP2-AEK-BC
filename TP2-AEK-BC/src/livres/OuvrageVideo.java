@@ -7,8 +7,10 @@ public class OuvrageVideo extends Ouvrage{
     private int dureeEnMinutes;
     private double taille;
 
-    public OuvrageVideo(String titre, Auteur auteur, LocalDate date, int nombreExemplaires) {
+    public OuvrageVideo(String titre, Auteur auteur, LocalDate date, int nombreExemplaires, int dureeEnMinutes, double taille) {
         super(titre, auteur, date, nombreExemplaires);
+        this.dureeEnMinutes = dureeEnMinutes;
+        this.taille = taille;
     }
 
 

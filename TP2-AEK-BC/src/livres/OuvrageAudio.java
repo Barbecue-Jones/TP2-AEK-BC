@@ -10,10 +10,11 @@ public class OuvrageAudio extends Ouvrage{
     private int nbMinutes;
     private FormatAudio format = FORMAT_DEFAUT;
 
-    public OuvrageAudio(String titre, Auteur auteur, LocalDate date, int nombreExemplaires) {
+    public OuvrageAudio(String titre, Auteur auteur, LocalDate date, int nombreExemplaires, int nbMinutes, FormatAudio format) {
         super(titre, auteur, date, nombreExemplaires);
+        this.nbMinutes = nbMinutes;
+        this.format = format;
     }
-
 
 
     //getters/setters
