@@ -11,9 +11,6 @@ public class OuvrageVideo extends Ouvrage{
         super(titre, auteur, date, nombreExemplaires);
     }
 
-    public OuvrageVideo(String titre, Auteur auteur) {
-        super(titre, auteur);
-    }
 
     public int getDureeEnMinutes() {
         return dureeEnMinutes;

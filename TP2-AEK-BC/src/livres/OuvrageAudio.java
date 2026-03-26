@@ -14,9 +14,6 @@ public class OuvrageAudio extends Ouvrage{
         super(titre, auteur, date, nombreExemplaires);
     }
 
-    public OuvrageAudio(String titre, Auteur auteur) {
-        super(titre, auteur);
-    }
 
 
     //getters/setters
