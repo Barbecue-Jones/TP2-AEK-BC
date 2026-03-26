@@ -1,9 +1,8 @@
 package tests;
 
-import livres.Auteur;
-import livres.Ouvrage;
-import livres.Pays;
+import livres.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,16 +18,16 @@ public class Librairie {
         auteurs.add(john);
         auteurs.add(jean);
 
-        ouvrages.add(new Ouvrage("Titre 1", john));
-        ouvrages.add(new Ouvrage("Titre 2", albertine));
-        ouvrages.add(new Ouvrage("Titre 3", john));
-        ouvrages.add(new Ouvrage("Titre 4", john));
-        ouvrages.add(new Ouvrage("Titre 5", albertine));
-        ouvrages.add(new Ouvrage("Titre 6", john));
-        ouvrages.add(new Ouvrage("Titre 7", john));
-        ouvrages.add(new Ouvrage("Titre 8", albertine,Ouvrage.Format.VIDEO));
-        ouvrages.add(new Ouvrage("Titre 9", john,Ouvrage.Format.AUDIO));
-        ouvrages.add(new Ouvrage("Titre 10", jean));
+        ouvrages.add(new OuvragePapier("Titre 1",albertine, LocalDate.now(), 1, 23 ));
+        ouvrages.add(new OuvrageVideo("Titre 2", albertine, LocalDate.now(), 78, 90, 1.3));
+        ouvrages.add(new OuvrageVideo("Titre 3", john, LocalDate.now(), 43, 6, 1.73));
+        ouvrages.add(new OuvrageVideo("Titre 4", john,  LocalDate.now(), 2, 3, 20.4));
+        ouvrages.add(new OuvrageAudio("Titre 5", albertine, LocalDate.now(), 100, 3, FormatAudio.NUMERIQUE));
+        ouvrages.add(new OuvragePapier("Titre 6", john, LocalDate.now(), 2, 1));
+        ouvrages.add(new OuvragePapier("Titre 7", john, LocalDate.now(), 2, 400));
+        ouvrages.add(new OuvrageVideo("Titre 8", john,  LocalDate.now(), 2, 3, 20.4));
+        ouvrages.add(new OuvrageVideo("Titre 9", john,  LocalDate.now(), 2, 3, 20.4));
+        ouvrages.add(new OuvrageAudio("Titre 5", albertine, LocalDate.now(), 100, 3, FormatAudio.ANALOGIQUE));
     }
 
     public List<Auteur> getAuteurs() {
