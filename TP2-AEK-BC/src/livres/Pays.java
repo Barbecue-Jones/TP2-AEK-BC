@@ -13,7 +13,23 @@ public class Pays {
         this.codePays = codePays;
     }
 
-    //todo ajouter getter/setter
+
+    public String getNomPays() {
+        return nomPays;
+    }
+
+    public void setNomPays(String nomPays) {
+        this.nomPays = nomPays;
+    }
+
+    public String getCodePays() {
+        return codePays;
+    }
+
+    public void setCodePays(String codePays) {
+        this.codePays = codePays;
+    }
+
 
 
     //fin classe
