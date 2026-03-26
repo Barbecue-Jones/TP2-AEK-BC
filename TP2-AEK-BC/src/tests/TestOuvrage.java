@@ -23,9 +23,16 @@ public class TestOuvrage {
 
 
     public void testOuvrages() {
+        //todo Implimenter les tests de Pays
+        Pays canada = new Pays("Canada", "CAD");
+        Pays cameroun =  new Pays("Cameroun", "CAM");
+        Pays empireRomain = new Pays("Empire Romain", "ER");
+        Pays royaumeUni = new Pays("Royaume-Uni", "UK");
+        Pays etasUnis = new Pays("Etas-Unis", "USA");
+
         //Deux auteurs deja prets pour les tests...
-        Auteur albertine = new Auteur("Albertine", "Tremblay", new Pays("Canada", "CAD"));
-        Auteur john = new Auteur("John", "Smith", new Pays("Étas-Unis", "USA"));
+        Auteur albertine = new Auteur("Albertine", "Tremblay", canada);
+        Auteur john = new Auteur("John", "Smith", etasUnis);
 
         //Voici une partie des tests! Il faut en ajouter, pour les fonctionnalités non testées!
         System.out.println("-----Test des constructeurs d'ouvrage et des diverses validations-----------");
