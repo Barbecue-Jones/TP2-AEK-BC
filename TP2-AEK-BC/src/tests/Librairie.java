@@ -12,8 +12,8 @@ public class Librairie {
     private List<Ouvrage> ouvrages = new ArrayList<>();
 
     public Librairie(){
-        Auteur albertine = new Auteur("Albertine", "Tremblay", new Pays("Canada", "CAN"));
-        Auteur john = new Auteur("John", "Smith", new Pays("Etats-Unis", "EU"));
+        Auteur albertine = new Auteur("Albertine", "Tremblay", new Pays("Canada", "CAD"));
+        Auteur john = new Auteur("John", "Smith", new Pays("Etats-Unis", "USA"));
         Auteur jean = new Auteur("Jean", "Némarre", new Pays("Suisse", "SUI"));
         auteurs.add(albertine);
         auteurs.add(john);
